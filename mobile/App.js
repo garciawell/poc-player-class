@@ -33,30 +33,33 @@ import {
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const requestCameraPermission = async () => {
-    // try {
-    //   const granted = await PermissionsAndroid.request(
-    //     PermissionsAndroid.PERMISSIONS.CAMERA,
-    //     PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
-    //     {
-    //       title: 'Cool Photo App Camera Permission',
-    //       message:
-    //         'Cool Photo App needs access to your camera ' +
-    //         'so you can take awesome pictures.',
-    //       buttonNeutral: 'Ask Me Later',
-    //       buttonNegative: 'Cancel',
-    //       buttonPositive: 'OK',
-    //     },
-    //   );
-    //   if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-    //     console.log('You can use the camera');
-    //   } else {
-    //     console.log('Camera permission denied');
-    //   }
-    // } catch (err) {
-    //   console.warn(err);
-    // }
-  };
+  // const requestCameraPermission = async () => {
+  //   try {
+  //     const granted = await PermissionsAndroid.request(
+  //       PermissionsAndroid.PERMISSIONS.CAMERA,
+  //       PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+  //       PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS,
+  //       PermissionsAndroid.PERMISSIONS.CAPTURE_AUDIO_OUTPUT,
+  //       PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+  //       {
+  //         title: 'Cool Photo App Camera Permission',
+  //         message:
+  //           'Cool Photo App needs access to your camera ' +
+  //           'so you can take awesome pictures.',
+  //         buttonNeutral: 'Ask Me Later',
+  //         buttonNegative: 'Cancel',
+  //         buttonPositive: 'OK',
+  //       },
+  //     );
+  //     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+  //       console.log('You can use the camera');
+  //     } else {
+  //       console.log('Camera permission denied');
+  //     }
+  //   } catch (err) {
+  //     console.warn(err);
+  //   }
+  // };
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -65,7 +68,7 @@ const App = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      {/* <Button title="request permissions" onPress={requestCameraPermission} /> */}
+      {/* <Button title="Android permissions" onPress={requestCameraPermission} /> */}
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
@@ -78,7 +81,8 @@ const App = () => {
               uri: 'https://garcia.whereby.com/8dd2d6ef-1fe9-43bb-9b62-af4b509505b5?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout&skipMediaPermissionPrompt',
             }}
             style={{flex: 1, height: Dimensions.get('window').height}}
-            allowAud
+            allowsInlineMediaPlayback
+            mediaPlaybackRequiresUserAction={false}
           />
         </View>
       </ScrollView>
