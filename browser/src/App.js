@@ -10,7 +10,7 @@ function App() {
               {/* <img src={logo} className="App-logo" alt="logo" /> */}
               <iframe
               title="conference"
-              src="https://garcia.whereby.com/8dd2d6ef-1fe9-43bb-9b62-af4b509505b5?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout"
+              src="https://lucasf3000.whereby.com/314d6bac-8aa3-48e9-b1d6-ac5625a6ce42?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout"
               allow="camera; microphone; fullscreen; speaker; display-capture"
             ></iframe>
           </div>
