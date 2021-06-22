@@ -35,7 +35,7 @@ function App() {
     socket.on('disconnect', () => {
       // alert("OPAAA")
     });
-  }, [])
+  }, [room])
 
 
   const handleChange = (type) => {
