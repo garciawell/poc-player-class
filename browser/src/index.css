@@ -13,6 +13,7 @@ code {
     monospace;
 }
 
+
 .App .container{
   max-width: 100%;
   margin: 0 auto;
@@ -20,7 +21,7 @@ code {
 }
 
 
-.App iframe{
+.App .player iframe{
   width: 100%;
   height: 850px;
   border:none;
@@ -37,4 +38,8 @@ code {
     border:none;
     padding: 10px;
   }
+}
+
+select {
+  padding: 15px 25px;
 }
