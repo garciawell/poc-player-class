@@ -40,6 +40,8 @@ code {
   }
 }
 
-select {
-  padding: 15px 25px;
+.basic-single {
+ max-width: 300px;
+ margin: 0 auto;
+ color: #333;
 }

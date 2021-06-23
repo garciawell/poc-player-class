@@ -78,7 +78,7 @@ const App = () => {
           }}>
           <WebView
             source={{
-              uri: 'https://garcia.whereby.com/8dd2d6ef-1fe9-43bb-9b62-af4b509505b5?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout&skipMediaPermissionPrompt',
+              uri: 'https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout&skipMediaPermissionPrompt',
             }}
             style={{flex: 1, height: Dimensions.get('window').height}}
             allowsInlineMediaPlayback

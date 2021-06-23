@@ -1,10 +1,11 @@
 
 import './App.css';
 import io from "socket.io-client";
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
+import Select from 'react-select';
 
-const socket = io('https://18.231.179.64:3016', { 
+const socket = io('https://localhost:3016', { 
   transports: ['websocket', 'polling'],
 });
  
@@ -39,32 +40,51 @@ function App() {
 
 
   const handleChange = (type) => {
-    console.log("TYPE", type)
     socket.emit("activities", { value: type, room})
   }
 
+  const options = useMemo(() => {
+    return [
+    {
+      value: "video",
+      label: "Video"
+    },
+    {
+      value: "audio",
+      label: "Audio"
+    }
+  ]}, [])
+
+ const defaultOptions = useMemo(() => {
+   return options.find(item=> item.value === type)
+ }, [options, type])
+
+
+ //34625666
   return (
     <div className="App">
         <header className="App-header">
           <div className="container">
               <h1>HYDRA</h1>
 
-
+        
               <div className="player">
                 {/* <img src={logo} className="App-logo" alt="logo" /> */}
                 <iframe
                 title="conference"
-                src="https://lucasf3000.whereby.com/314d6bac-8aa3-48e9-b1d6-ac5625a6ce42?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout"
+                src="https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout&roomIntegrations=on&topToolbar=on"
                 allow="camera; microphone; fullscreen; speaker; display-capture"
               ></iframe>
               </div>
               <h2>Atividades: {type}</h2>
               {isAdmin &&
-                <div>
-                  <select onChange={(e) => handleChange(e.target.value)}>
-                    <option value="video">Video</option>
-                    <option value="audio">Audio</option>
-                  </select>
+                <div className="basic-single">
+                  <Select
+                  value={defaultOptions}
+                  options={options}
+                  onChange={e  => handleChange(e.value)}
+                />
+
                 </div>
                 }
 
