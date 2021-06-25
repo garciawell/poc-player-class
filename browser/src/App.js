@@ -4,8 +4,9 @@ import io from "socket.io-client";
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import Select from 'react-select';
+import Act01 from './Components/Act01';
 
-const socket = io('https://localhost:3016', { 
+const socket = io('https://local-wtp.wiseup.com:3016', { 
   transports: ['websocket', 'polling'],
 });
  
@@ -40,7 +41,7 @@ function App() {
 
 
   const handleChange = (type) => {
-    socket.emit("activities", { value: type, room})
+    socket.emit("activities", { value: type, room })
   }
 
   const options = useMemo(() => {
@@ -52,6 +53,10 @@ function App() {
     {
       value: "audio",
       label: "Audio"
+    }    
+    ,{
+      value: "atv1",
+      label: "Atividade 01"
     }
   ]}, [])
 
@@ -72,7 +77,7 @@ function App() {
                 {/* <img src={logo} className="App-logo" alt="logo" /> */}
                 <iframe
                 title="conference"
-                src="https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout&roomIntegrations=on&topToolbar=on"
+                src="https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&lang=pt&people=on&background=on&breakout&topToolbar=on"
                 allow="camera; microphone; fullscreen; speaker; display-capture"
               ></iframe>
               </div>
@@ -117,6 +122,10 @@ function App() {
                 >         
                 </source>
               </audio>
+              }             
+              
+               {type === "atv1" &&
+                <Act01 />
               }
           </div>
 
