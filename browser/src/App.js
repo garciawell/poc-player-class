@@ -6,7 +6,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import Select from 'react-select';
 import Act01 from './Components/Act01';
 
-const socket = io('https://local-wtp.wiseup.com:3016', { 
+const socket = io('https://hydra-server-garcia.herokuapp.com', { 
   transports: ['websocket', 'polling'],
 });
  

@@ -23,7 +23,7 @@ function Act01() {
       <Card className="card">
       <h2>Classifique as palavras em: características, membros da família, profissão, lugares e verbos. </h2>
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item xs={12} lg={4}>
             <List>
                 <Typography variant="h4" gutterBottom>
                 Busy
@@ -42,7 +42,7 @@ function Act01() {
             </List>
             {value && <Obs>ocupado, com muitas atribuições / agitado, com muitas pessoas</Obs>}
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} lg={4}>
         <List>
                 <Typography variant="h4" gutterBottom>
                 Companies
@@ -61,7 +61,7 @@ function Act01() {
             </List>
             {value1 && <Obs>companies são empresas, business negócios</Obs>}
         </Grid>       
-         <Grid item xs={4}>
+         <Grid item xs={12} lg={4}>
          <List>
                 <Typography variant="h4" gutterBottom>
                 Home
