@@ -95,7 +95,7 @@ function App() {
 
               {type === "video" &&
                 <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/dqR5k50qszY?controls=0&autoplay=1&mute=1" 
+                src="https://www.youtube.com/embed/dqR5k50qszY?controls=0&autoplay=1" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; 
