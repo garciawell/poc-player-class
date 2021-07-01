@@ -77,7 +77,7 @@ function App() {
                 {/* <img src={logo} className="App-logo" alt="logo" /> */}
                 <iframe
                 title="conference"
-                src="https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&lang=pt&people=on&background=on&breakout&topToolbar=on"
+                src="https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&lang=pt&people=on&background=on&breakout&topToolbar=on&screenshare=on"
                 allow="camera; microphone; fullscreen; speaker; display-capture"
               ></iframe>
               </div>
