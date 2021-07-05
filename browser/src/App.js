@@ -71,15 +71,18 @@ function App() {
         <header className="App-header">
           <div className="container">
               <h1>HYDRA</h1>
-
-        
-              <div className="player">
-                {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                <iframe
-                title="conference"
-                src={isAdmin ? "https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?roomKey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZWV0aW5nSWQiOiIzNDYyNTY2NiIsInJvb21SZWZlcmVuY2UiOnsicm9vbU5hbWUiOiIvZmNjZGNhNTAtOGE4Zi00YTA5LTg1NDktNmQ1YTc1NjI0ODJmIiwib3JnYW5pemF0aW9uSWQiOiIxMTU2MzUifSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50cy5zcnYud2hlcmVieS5jb20iLCJpYXQiOjE2MjUxNjgxNzAsInJvb21LZXlUeXBlIjoibWVldGluZ0hvc3QifQ.x6h4aBiBsFNQ7P1B22--4YmHLr5T3sW4DXA9haQ2DV0": "https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&lang=pt&people=on&background=on&breakout&topToolbar=on"}
-                allow="camera; microphone; fullscreen; speaker; display-capture"
-              ></iframe>
+              <div className="wrapper">
+                <div className="slides">
+                    <img src="https://i.ytimg.com/vi/Bkx6kauuA20/maxresdefault.jpg" />
+                </div>
+                <div className="player">
+                  {/* <img src={logo} className="App-logo" alt="logo" /> */}
+                  <iframe
+                  title="conference"
+                  src={isAdmin ? "https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?roomKey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZWV0aW5nSWQiOiIzNDYyNTY2NiIsInJvb21SZWZlcmVuY2UiOnsicm9vbU5hbWUiOiIvZmNjZGNhNTAtOGE4Zi00YTA5LTg1NDktNmQ1YTc1NjI0ODJmIiwib3JnYW5pemF0aW9uSWQiOiIxMTU2MzUifSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50cy5zcnYud2hlcmVieS5jb20iLCJpYXQiOjE2MjUxNjgxNzAsInJvb21LZXlUeXBlIjoibWVldGluZ0hvc3QifQ.x6h4aBiBsFNQ7P1B22--4YmHLr5T3sW4DXA9haQ2DV0": "https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&lang=pt&people=on&background=on&breakout&topToolbar=on"}
+                  allow="camera; microphone; fullscreen; speaker; display-capture"
+                ></iframe>
+                </div>
               </div>
               <h2>Atividades: {type}</h2>
               {isAdmin &&
