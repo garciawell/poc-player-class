@@ -77,8 +77,11 @@ const App = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <WebView
+            // source={{
+            //   uri: 'https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout&skipMediaPermissionPrompt',
+            // }}
             source={{
-              uri: 'https://lucasf3000.whereby.com/fccdca50-8a8f-4a09-8549-6d5a7562482f?embed&chat=on&screenshare=on&lang=pt&people=on&background=on&breakout&skipMediaPermissionPrompt',
+              uri: 'https://smart.newrow.com/room/nr2/?room_id=tdo-614&firstRun',
             }}
             style={{flex: 1, height: Dimensions.get('window').height}}
             allowsInlineMediaPlayback
